@@ -1,0 +1,41 @@
+
+
+:root {
+  
+  --vx-app-bg: #161827;
+
+  
+  --vx-body-1: #1d2237;
+  --vx-body-2: #171b2b;
+  --vx-body-3: #11131f;
+
+  
+  --vx-strip-1: #f7d67e;
+  --vx-strip-2: #f0c44c;
+  --vx-strip-ink: #2b1e03;
+  --vx-strip-ink-soft: rgba(43, 30, 3, 0.72);
+
+  
+  --vx-line: rgba(255, 255, 255, 0.08);
+  --vx-line-strong: rgba(255, 255, 255, 0.15);
+  --vx-surface: rgba(255, 255, 255, 0.045);
+  --vx-surface-strong: rgba(255, 255, 255, 0.08);
+
+  
+  --vx-ink: #eef1f8;
+  --vx-ink-muted: rgba(238, 241, 248, 0.68);
+  --vx-ink-faint: rgba(238, 241, 248, 0.5);
+
+  
+  --vx-r-card: 18px;
+  --vx-r-panel: 14px;
+  --vx-r-tile: 10px;
+  --vx-r-pill: 999px;
+
+  
+  --vx-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --vx-speed: 0.42s;
+
+  
+  --vx-page-max: 1180px;
+}

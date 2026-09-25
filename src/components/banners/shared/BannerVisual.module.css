@@ -1,0 +1,102 @@
+
+
+.frame {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 168px;
+  border-radius: var(--vx-r-panel);
+  background-image: radial-gradient(
+    120% 100% at 50% 8%,
+    rgba(var(--vx-accent-rgb), 0.14) 0%,
+    rgba(var(--vx-accent-rgb), 0.04) 46%,
+    transparent 74%
+  );
+  transition: transform 0.3s var(--vx-ease);
+}
+
+.padded {
+  padding: 14px;
+  border: 1px solid var(--vx-line);
+  background-color: rgba(9, 11, 18, 0.42);
+  background-image: radial-gradient(
+    120% 100% at 50% 0%,
+    rgba(var(--vx-accent-rgb), 0.16) 0%,
+    transparent 70%
+  );
+}
+
+
+.aura {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 74%;
+  padding-bottom: 74%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(var(--vx-accent-rgb), 0.2) 0%,
+    rgba(var(--vx-accent-rgb), 0.06) 52%,
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+
+.floor {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: 86%;
+  height: 26%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(var(--vx-accent-rgb), 0.22) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.stage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.stage > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+@media (max-width: 991.98px) {
+  .frame {
+    min-height: 150px;
+  }
+
+  .stage > svg {
+    max-height: 205px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .frame {
+    min-height: 128px;
+  }
+
+  
+  .stage > svg {
+    max-height: var(--vx-scene-max, 140px);
+  }
+}

@@ -1,0 +1,103 @@
+
+
+.card {
+  --vx-pad-x: 20px;
+  --vx-pad-y: 20px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 330px; 
+  overflow: hidden;
+  border-radius: var(--vx-r-card);
+  border: 1px solid var(--vx-line);
+  background-color: var(--vx-body-2);
+  
+  background-image:
+    radial-gradient(120% 150% at 100% 0%, rgba(var(--vx-accent-rgb), 0.17), transparent 58%),
+    radial-gradient(90% 120% at 0% 105%, rgba(var(--vx-accent-rgb), 0.08), transparent 62%),
+    linear-gradient(180deg, var(--vx-body-1) 0%, var(--vx-body-2) 46%, var(--vx-body-3) 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 30px 60px -34px rgba(0, 0, 0, 0.95);
+  transition: transform 0.28s var(--vx-ease), border-color 0.28s var(--vx-ease),
+    box-shadow 0.28s var(--vx-ease);
+}
+
+
+@media (min-width: 576px) {
+  .card {
+    --vx-pad-x: 26px;
+    --vx-pad-y: 26px;
+    min-height: 380px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    --vx-pad-x: 30px;
+    --vx-pad-y: 28px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .card {
+    --vx-pad-x: 40px;
+    --vx-pad-y: 30px;
+    height: 430px;
+    min-height: 410px;
+    max-height: 450px;
+  }
+}
+
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(var(--vx-accent-rgb), 0.32);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 0 0 1px rgba(var(--vx-accent-rgb), 0.12),
+    0 36px 70px -34px rgba(0, 0, 0, 1);
+}
+
+.card:focus-within {
+  border-color: rgba(var(--vx-accent-rgb), 0.42);
+}
+
+
+.glow {
+  position: absolute;
+  top: -18%;
+  right: -12%;
+  width: 62%;
+  padding-bottom: 62%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(var(--vx-accent-rgb), 0.16),
+    rgba(var(--vx-accent-rgb), 0.04) 55%,
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  .glow {
+    width: 80%;
+    padding-bottom: 80%;
+    top: -26%;
+    right: -22%;
+  }
+}
+
+.body {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  padding: var(--vx-pad-y) var(--vx-pad-x);
+}

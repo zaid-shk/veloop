@@ -1,0 +1,59 @@
+
+
+@keyframes vx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes vx-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vx-reveal,
+.vx-pop {
+  animation-duration: 0.6s;
+  animation-timing-function: var(--vx-ease);
+  animation-fill-mode: both;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.vx-reveal {
+  animation-name: vx-rise;
+}
+
+.vx-pop {
+  animation-name: vx-pop;
+  animation-duration: 0.5s;
+}
+
+
+[data-inview="false"] .vx-reveal,
+[data-inview="false"] .vx-pop {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vx-reveal,
+  .vx-pop {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

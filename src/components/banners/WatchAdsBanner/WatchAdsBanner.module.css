@@ -1,0 +1,237 @@
+
+
+.scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.videoLabel {
+  font-size: 11px;
+  font-weight: 700;
+  fill: rgba(238, 241, 248, 0.45);
+}
+
+.veMark {
+  font-size: 34px;
+  font-weight: 800;
+  fill: var(--vx-accent);
+}
+
+.coinMark {
+  font-size: 13px;
+  font-weight: 800;
+  fill: var(--vx-accent-ink);
+}
+
+
+.eq,
+.rings,
+.playBtn,
+.coin,
+.ring,
+.shimmer {
+  transform-box: fill-box;
+}
+
+.eq {
+  transform-origin: 50% 100%;
+  animation: waEq 1.15s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.playBtn {
+  transform-origin: center;
+  animation: waPlay 0.6s var(--vx-ease) both;
+}
+
+.rings {
+  transform-origin: center;
+  animation: waRings 2.8s ease-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.coin {
+  transform-origin: center;
+  animation: waCoin 5s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.ring {
+  transform-origin: center;
+  animation: waTwinkle 2.6s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.shimmer {
+  animation: waShimmer 4.4s ease-in-out infinite;
+}
+
+@keyframes waEq {
+  0%,
+  100% {
+    transform: scaleY(0.45);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes waPlay {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes waRings {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@keyframes waCoin {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(6deg);
+  }
+}
+
+@keyframes waTwinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes waShimmer {
+  0% {
+    width: 16%;
+  }
+  70% {
+    width: 82%;
+  }
+  100% {
+    width: 16%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eq,
+  .rings,
+  .playBtn,
+  .coin,
+  .ring,
+  .shimmer {
+    animation: none;
+  }
+}
+
+
+.frameTop {
+  stop-color: var(--vx-accent);
+  stop-opacity: 0.34;
+}
+
+.frameMid {
+  stop-color: white;
+  stop-opacity: 0.09;
+}
+
+.frameBottom {
+  stop-color: rgba(9, 12, 22, 0.95);
+}
+
+.screenTop {
+  stop-color: rgba(16, 24, 46, 1);
+}
+
+.screenBottom {
+  stop-color: rgba(6, 9, 20, 1);
+}
+
+.walletTop {
+  stop-color: var(--vx-accent);
+  stop-opacity: 0.38;
+}
+
+.walletBottom {
+  stop-color: rgba(16, 24, 46, 1);
+}
+
+.coinTop {
+  stop-color: white;
+  stop-opacity: 0.62;
+}
+
+.coinBottom {
+  stop-color: var(--vx-accent);
+}
+
+.screenFill {
+  fill: rgba(7, 11, 22, 1);
+}
+
+.frameStroke {
+  stroke: rgba(var(--vx-accent-rgb), 0.45);
+}
+
+.softStroke {
+  stroke: rgba(255, 255, 255, 0.12);
+}
+
+.walletInner {
+  fill: rgba(var(--vx-accent-rgb), 0.1);
+  stroke: rgba(var(--vx-accent-rgb), 0.32);
+}
+
+.progressTrack {
+  fill: rgba(255, 255, 255, 0.14);
+}
+
+.progressFill {
+  fill: var(--vx-accent);
+}
+
+.accentFill {
+  fill: var(--vx-accent);
+}
+
+.playRing {
+  fill: none;
+  stroke: rgba(var(--vx-accent-rgb), 0.55);
+}
+
+.strapFill {
+  fill: rgba(var(--vx-accent-rgb), 0.5);
+}
+
+.playIcon {
+  fill: rgba(6, 10, 20, 1);
+}
+
+.controlIcon {
+  fill: rgba(238, 241, 248, 0.55);
+}
+

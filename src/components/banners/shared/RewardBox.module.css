@@ -1,0 +1,110 @@
+
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px 10px 10px;
+  border-radius: var(--vx-r-panel);
+  background-image: linear-gradient(
+    135deg,
+    rgba(var(--vx-accent-rgb), 0.19) 0%,
+    rgba(var(--vx-accent-rgb), 0.07) 62%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(var(--vx-accent-rgb), 0.3);
+  transition: border-color 0.24s var(--vx-ease), transform 0.24s var(--vx-ease);
+}
+
+.box:hover {
+  transform: translateY(-1px);
+  border-color: rgba(var(--vx-accent-rgb), 0.48);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  color: var(--vx-accent-ink);
+  background-image: linear-gradient(
+    180deg,
+    rgba(var(--vx-accent-rgb), 1) 0%,
+    rgba(var(--vx-accent-rgb), 0.8) 100%
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 6px 14px -6px rgba(var(--vx-accent-rgb), 0.8);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.label {
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--vx-ink-faint);
+}
+
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  min-width: 0;
+}
+
+.value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--vx-ink);
+  overflow-wrap: anywhere;
+}
+
+.suffix {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--vx-ink-faint);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  padding: 5px 11px;
+  border-radius: var(--vx-r-pill);
+  background-color: rgba(var(--vx-accent-rgb), 0.14);
+  border: 1px solid rgba(var(--vx-accent-rgb), 0.34);
+  color: var(--vx-accent);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+@media (max-width: 575.98px) {
+  .status {
+    display: none;
+  }
+}

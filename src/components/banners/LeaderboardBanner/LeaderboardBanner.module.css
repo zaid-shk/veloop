@@ -1,0 +1,173 @@
+
+
+.scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.name {
+  font-size: 17px;
+  font-weight: 700;
+  fill: rgba(238, 241, 248, 0.82);
+}
+
+.score {
+  font-size: 15px;
+  font-weight: 700;
+  fill: rgba(238, 241, 248, 0.95);
+}
+
+.scoreGold {
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--vx-accent);
+}
+
+.rankText {
+  font-size: 18px;
+  font-weight: 800;
+  fill: #1a1405;
+}
+
+
+.grow,
+.rise,
+.pop,
+.float,
+.twinkle,
+.dash,
+.pulse {
+  transform-box: fill-box;
+}
+
+.grow {
+  transform-origin: 50% 100%;
+  animation: lbGrow 0.8s var(--vx-ease) both;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.rise {
+  animation: lbRise 0.7s var(--vx-ease) both;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.pop {
+  transform-origin: center;
+  animation: lbPop 0.5s var(--vx-ease) both;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.float {
+  animation: lbFloat 5.5s ease-in-out infinite;
+}
+
+.dash {
+  stroke-dasharray: 8 7;
+  animation: lbDash 1.8s linear infinite;
+}
+
+.twinkle {
+  transform-origin: center;
+  animation: lbTwinkle 2.6s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.pulse {
+  transform-origin: center;
+  animation: lbPulse 3.2s ease-out infinite;
+}
+
+@keyframes lbGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes lbRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lbPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lbFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes lbDash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -30;
+  }
+}
+
+@keyframes lbTwinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes lbPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.82);
+  }
+  75% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grow,
+  .rise,
+  .pop,
+  .float,
+  .twinkle,
+  .dash,
+  .pulse {
+    animation: none;
+  }
+}

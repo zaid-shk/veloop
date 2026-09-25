@@ -1,0 +1,139 @@
+
+
+
+.accent {
+  fill: var(--vx-accent);
+}
+
+.accentInk {
+  fill: var(--vx-accent-ink);
+}
+
+.accentSoft {
+  fill: rgba(var(--vx-accent-rgb), 0.3);
+}
+
+.accentFaint {
+  fill: rgba(var(--vx-accent-rgb), 0.13);
+}
+
+.dark {
+  fill: rgba(10, 14, 26, 1);
+}
+
+.darker {
+  fill: rgba(6, 9, 18, 1);
+}
+
+.surface {
+  fill: rgba(255, 255, 255, 0.06);
+}
+
+.glass {
+  fill: rgba(255, 255, 255, 0.11);
+}
+
+.ink {
+  fill: rgba(238, 241, 248, 0.32);
+}
+
+.inkStrong {
+  fill: rgba(238, 241, 248, 0.85);
+}
+
+
+.goldLight {
+  fill: rgba(255, 226, 158, 1);
+}
+
+.gold {
+  fill: rgba(240, 196, 76, 1);
+}
+
+.goldDeep {
+  fill: rgba(160, 108, 28, 1);
+}
+
+.goldInk {
+  fill: rgba(74, 50, 8, 1);
+}
+
+
+.strokeAccent {
+  fill: none;
+  stroke: rgba(var(--vx-accent-rgb), 0.5);
+}
+
+.strokeAccentSoft {
+  fill: none;
+  stroke: rgba(var(--vx-accent-rgb), 0.26);
+}
+
+.strokeSoft {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.14);
+}
+
+.strokeGold {
+  fill: none;
+  stroke: rgba(201, 154, 52, 1);
+}
+
+
+.stopAccent {
+  stop-color: var(--vx-accent);
+}
+
+.stopAccent80 {
+  stop-color: var(--vx-accent);
+  stop-opacity: 0.8;
+}
+
+.stopAccent45 {
+  stop-color: var(--vx-accent);
+  stop-opacity: 0.45;
+}
+
+.stopAccent18 {
+  stop-color: var(--vx-accent);
+  stop-opacity: 0.18;
+}
+
+.stopAccent0 {
+  stop-color: var(--vx-accent);
+  stop-opacity: 0;
+}
+
+.stopWhite40 {
+  stop-color: white;
+  stop-opacity: 0.4;
+}
+
+.stopWhite12 {
+  stop-color: white;
+  stop-opacity: 0.12;
+}
+
+.stopDeep {
+  stop-color: rgba(22, 29, 50, 1);
+}
+
+.stopDark {
+  stop-color: rgba(10, 14, 26, 1);
+}
+
+.stopInk {
+  stop-color: rgba(5, 8, 16, 1);
+}
+
+.stopGoldLight {
+  stop-color: rgba(255, 232, 175, 1);
+}
+
+.stopGold {
+  stop-color: rgba(240, 196, 76, 1);
+}
+
+.stopGoldDeep {
+  stop-color: rgba(146, 97, 24, 1);
+}

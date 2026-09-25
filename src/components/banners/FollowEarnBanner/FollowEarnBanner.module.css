@@ -1,0 +1,329 @@
+
+
+.scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.phoneFill {
+  fill: rgba(13, 17, 30, 1);
+}
+
+.screenFill {
+  fill: rgba(19, 24, 41, 1);
+}
+
+.notch {
+  fill: rgba(7, 10, 19, 1);
+}
+
+.phoneStroke {
+  stroke: rgba(var(--vx-accent-rgb), 0.45);
+}
+
+.nameText {
+  font-size: 11px;
+  font-weight: 800;
+  fill: rgba(238, 241, 248, 0.95);
+}
+
+.handleText {
+  font-size: 7.5px;
+  font-weight: 600;
+  fill: rgba(238, 241, 248, 0.45);
+}
+
+.pillText {
+  font-size: 9px;
+  font-weight: 800;
+  fill: var(--vx-accent-ink);
+}
+
+.statText {
+  font-size: 9px;
+  font-weight: 800;
+  fill: rgba(238, 241, 248, 0.85);
+}
+
+.badgeText {
+  font-size: 11px;
+  font-weight: 800;
+  fill: var(--vx-accent-ink);
+}
+
+.markText {
+  font-size: 13px;
+  font-weight: 800;
+  fill: var(--vx-accent-ink);
+}
+
+.orbit {
+  fill: none;
+  stroke: rgba(var(--vx-accent-rgb), 0.3);
+  stroke-dasharray: 5 8;
+}
+
+.orb {
+  fill: rgba(255, 255, 255, 0.07);
+  stroke: rgba(var(--vx-accent-rgb), 0.4);
+}
+
+.orbGlyph {
+  fill: var(--vx-accent);
+}
+
+.orbGlyphStroke {
+  fill: none;
+  stroke: var(--vx-accent);
+  stroke-linecap: round;
+}
+
+.statTile {
+  fill: rgba(255, 255, 255, 0.08);
+}
+
+
+.orbitSpin,
+.orbFloat,
+.badgePop,
+.phoneRise,
+.pillPulse {
+  transform-box: fill-box;
+}
+
+.orbitSpin {
+  transform-origin: center;
+  animation: feOrbit 26s linear infinite;
+}
+
+.orbFloat {
+  transform-origin: center;
+  animation: feOrb 5.4s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.badgePop {
+  transform-origin: center;
+  animation: feBadge 2.8s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.phoneRise {
+  animation: fePhone 0.8s var(--vx-ease) both;
+}
+
+.pillPulse {
+  transform-origin: center;
+  animation: fePill 3.4s ease-in-out infinite;
+}
+
+@keyframes feOrbit {
+  from {
+    stroke-dashoffset: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    stroke-dashoffset: -130;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes feOrb {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes feBadge {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fePhone {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fePill {
+  0%,
+  100% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbitSpin,
+  .orbFloat,
+  .badgePop,
+  .phoneRise,
+  .pillPulse {
+    animation: none;
+  }
+}
+
+
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.noteIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  flex: 0 0 auto;
+  color: var(--vx-accent);
+  background-color: rgba(var(--vx-accent-rgb), 0.16);
+  border: 1px solid rgba(var(--vx-accent-rgb), 0.3);
+}
+
+.noteText {
+  min-width: 0;
+  font-size: 0.71rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--vx-ink-muted);
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: var(--vx-r-tile);
+  background-image: linear-gradient(
+    135deg,
+    rgba(var(--vx-accent-rgb), 0.22) 0%,
+    rgba(var(--vx-accent-rgb), 0.08) 100%
+  );
+  border: 1px solid rgba(var(--vx-accent-rgb), 0.34);
+}
+
+.rewardValue {
+  font-size: 1.32rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--vx-accent);
+}
+
+.rewardLabel {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--vx-ink-faint);
+}
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.channel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  border: 1px solid var(--vx-line);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--vx-ink-muted);
+  transition: transform 0.2s var(--vx-ease), color 0.2s var(--vx-ease),
+    border-color 0.2s var(--vx-ease);
+}
+
+.channel:hover {
+  transform: translateY(-1px);
+  color: var(--vx-accent);
+  border-color: rgba(var(--vx-accent-rgb), 0.4);
+}
+
+.finePrint {
+  margin: 0;
+  font-size: 0.62rem;
+  line-height: 1.45;
+  color: var(--vx-ink-faint);
+}
+
+.panelGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+
+@media (min-width: 576px) {
+  .panelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 14px;
+    align-items: start;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .panelGrid {
+    gap: 8px;
+  }
+
+  .noteText {
+    font-size: 0.67rem;
+  }
+
+  .noteIcon {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+  }
+
+  .reward {
+    padding: 9px 12px;
+  }
+
+  .rewardValue {
+    font-size: 1.15rem;
+  }
+
+  .channels {
+    display: none;
+  }
+
+  .finePrint {
+    display: none;
+  }
+}

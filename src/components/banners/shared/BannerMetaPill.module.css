@@ -1,0 +1,41 @@
+
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  padding: 7px 13px 7px 8px;
+  border-radius: var(--vx-r-pill);
+  background-color: var(--vx-surface);
+  border: 1px solid var(--vx-line);
+  color: var(--vx-ink-muted);
+  font-size: 0.73rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background-color 0.2s var(--vx-ease), border-color 0.2s var(--vx-ease),
+    transform 0.2s var(--vx-ease);
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+  background-color: var(--vx-surface-strong);
+  border-color: rgba(var(--vx-accent-rgb), 0.3);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(var(--vx-accent-rgb), 0.16);
+  color: var(--vx-accent);
+  flex: 0 0 auto;
+}
+
+.text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

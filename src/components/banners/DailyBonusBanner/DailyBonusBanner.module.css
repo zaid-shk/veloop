@@ -1,0 +1,312 @@
+
+
+.scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.giftLid,
+.giftCoin,
+.giftSpark,
+.giftGlow,
+.giftBox {
+  transform-box: fill-box;
+}
+
+.giftLid {
+  transform-origin: 50% 100%;
+  animation: dbLid 4.6s ease-in-out infinite;
+}
+
+.giftCoin {
+  transform-origin: center;
+  animation: dbCoin 5s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.giftSpark {
+  transform-origin: center;
+  animation: dbSpark 2.6s ease-in-out infinite;
+  animation-delay: var(--vx-delay, 0s);
+}
+
+.giftGlow {
+  transform-origin: center;
+  animation: dbGlow 3.8s ease-in-out infinite;
+}
+
+.giftBox {
+  animation: dbBox 0.8s var(--vx-ease) both;
+}
+
+.coinMark {
+  font-size: 13px;
+  font-weight: 800;
+  fill: rgba(74, 50, 8, 1);
+}
+
+.medalMark {
+  font-size: 20px;
+  font-weight: 800;
+  fill: rgba(74, 50, 8, 1);
+}
+
+@keyframes dbLid {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-7deg);
+  }
+}
+
+@keyframes dbCoin {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(8deg);
+  }
+}
+
+@keyframes dbSpark {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes dbGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes dbBox {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .giftLid,
+  .giftCoin,
+  .giftSpark,
+  .giftGlow,
+  .giftBox {
+    animation: none;
+  }
+}
+
+
+
+.panelGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.bonus {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 14px;
+  border-radius: var(--vx-r-tile);
+  border: 1px solid rgba(var(--vx-accent-rgb), 0.34);
+  background-image: linear-gradient(
+    135deg,
+    rgba(var(--vx-accent-rgb), 0.24) 0%,
+    rgba(var(--vx-accent-rgb), 0.07) 100%
+  );
+}
+
+.bonusLabel {
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--vx-ink-faint);
+}
+
+.bonusValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--vx-accent);
+}
+
+.bonusStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--vx-ink-muted);
+}
+
+.bonusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--vx-accent);
+}
+
+.streak {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.streakHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.streakTitle {
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--vx-ink-faint);
+}
+
+.streakCount {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--vx-accent);
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid var(--vx-line);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 0.56rem;
+  font-weight: 800;
+  color: var(--vx-ink-faint);
+}
+
+.dayDone {
+  border-color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(var(--vx-accent-rgb), 1) 0%,
+    rgba(var(--vx-accent-rgb), 0.78) 100%
+  );
+  color: var(--vx-accent-ink);
+}
+
+.dayToday {
+  border-style: dashed;
+  border-color: rgba(var(--vx-accent-rgb), 0.75);
+  background-color: transparent;
+  color: var(--vx-accent);
+}
+
+.streakNote {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--vx-ink-muted);
+}
+
+.streakHint {
+  font-size: 0.62rem;
+  color: var(--vx-ink-faint);
+  margin: 0;
+}
+
+
+@media (min-width: 576px) {
+  .panelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px 14px;
+    align-items: center;
+  }
+
+  .streakHint {
+    display: none;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .panelGrid {
+    gap: 6px;
+  }
+
+  .bonus {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 7px 10px;
+  }
+
+  .bonusLabel {
+    display: none;
+  }
+
+  .bonusValue {
+    font-size: 1.05rem;
+  }
+
+  .bonusStatus {
+    font-size: 0.62rem;
+  }
+
+  .streak {
+    gap: 0;
+  }
+
+  .streakHead,
+  .streakNote,
+  .streakHint {
+    display: none;
+  }
+
+  .days {
+    grid-template-columns: repeat(7, minmax(0, 30px));
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .day {
+    font-size: 0.54rem;
+  }
+}

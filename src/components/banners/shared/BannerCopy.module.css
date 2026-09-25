@@ -1,0 +1,100 @@
+
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stack > * {
+  margin: 0;
+}
+
+
+.title {
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--vx-ink);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.accent {
+  color: var(--vx-accent);
+}
+
+.accentBlock {
+  display: block;
+  color: var(--vx-accent);
+}
+
+
+.text {
+  margin-top: 10px;
+  max-width: 47ch;
+  font-size: clamp(0.86rem, 0.84rem + 0.1vw, 0.95rem);
+  line-height: 1.55;
+  color: var(--vx-ink-muted);
+}
+
+
+.pills {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.reward {
+  margin-top: 12px;
+}
+
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+
+
+.note {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--vx-ink-faint);
+}
+
+.note svg {
+  flex: 0 0 auto;
+  color: var(--vx-accent);
+}
+
+@media (max-width: 575.98px) {
+  .title {
+    letter-spacing: -0.015em;
+  }
+
+  .text {
+    line-height: 1.5;
+  }
+
+  .pills {
+    margin-top: 14px;
+  }
+
+  .actions {
+    margin-top: 16px;
+  }
+
+  .note {
+    margin-top: 12px;
+  }
+}
