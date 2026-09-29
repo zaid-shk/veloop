@@ -39,7 +39,7 @@ export default function RewardFeatureBanner({
       />
 
       <div className={styles.body}>
-        <div className="row g-3 g-md-4 align-items-center">{children}</div>
+        <div className="row g-2 g-sm-3 g-md-4 align-items-center">{children}</div>
       </div>
     </section>
   );

@@ -92,11 +92,21 @@
 
 @media (max-width: 575.98px) {
   .frame {
-    min-height: 128px;
+    min-height: 124px;
   }
 
   
   .stage > svg {
     max-height: var(--vx-scene-max, 140px);
+  }
+}
+
+@media (max-width: 379.98px) {
+  .frame {
+    min-height: 112px;
+  }
+
+  .stage > svg {
+    max-height: 112px;
   }
 }

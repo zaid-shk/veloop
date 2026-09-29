@@ -104,6 +104,21 @@
 }
 
 @media (max-width: 575.98px) {
+  .box {
+    gap: 10px;
+    padding: 8px 12px 8px 8px;
+  }
+
+  .icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .value {
+    font-size: 0.98rem;
+  }
+
   .status {
     display: none;
   }

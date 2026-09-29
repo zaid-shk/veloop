@@ -346,9 +346,14 @@
   }
 
   .item {
-    flex: 1 1 auto;
+    flex: 1 1 0;
+    min-width: 0;
     gap: 6px;
-    padding: 6px 7px;
+    padding: 5px 7px;
+  }
+
+  .item:first-child {
+    flex: 1 1 100%;
   }
 
   .itemLabel {
@@ -356,18 +361,28 @@
   }
 
   .itemIcon {
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
     border-radius: 7px;
   }
 
   .itemValue,
   .itemTitle {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .itemTitle {
+    white-space: normal;
+    text-overflow: clip;
+    line-height: 1.2;
+  }
+
+  .itemTrail {
+    display: none;
   }
 
   .copyLabel {
@@ -375,7 +390,7 @@
   }
 
   .copyBtn {
-    padding: 5px 7px;
+    padding: 4px 7px;
     gap: 0;
   }
 }

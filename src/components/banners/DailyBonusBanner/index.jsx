@@ -11,7 +11,7 @@ import BonusPanel from "./BonusPanel";
 export default function DailyBonusBanner({ onClaimBonus = () => {} }) {
   return (
     <RewardFeatureBanner
-      id="daily-bonus"
+      id="daily-bonus-card"
       index="05"
       eyebrow="Daily bonus"
       icon={<Gift size={15} strokeWidth={2.3} />}

@@ -18,7 +18,7 @@ export default function LeaderboardBanner({ onViewLeaderboard = () => {} }) {
 
   return (
     <RewardFeatureBanner
-      id="leaderboard"
+      id="leaderboard-card"
       index="01"
       eyebrow="Leaderboard"
       icon={<Trophy size={15} strokeWidth={2.3} />}

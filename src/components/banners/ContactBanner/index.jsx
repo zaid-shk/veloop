@@ -15,7 +15,7 @@ export default function ContactBanner({
 }) {
   return (
     <RewardFeatureBanner
-      id="support"
+      id="support-card"
       index="03"
       eyebrow="Contact us"
       icon={<Headphones size={15} strokeWidth={2.3} />}

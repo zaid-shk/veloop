@@ -11,7 +11,7 @@ import FollowPanel from "./FollowPanel";
 export default function FollowEarnBanner({ onFollowEarn = () => {} }) {
   return (
     <RewardFeatureBanner
-      id="social"
+      id="social-card"
       index="04"
       eyebrow={"Follow & earn"}
       icon={<Heart size={15} strokeWidth={2.3} />}

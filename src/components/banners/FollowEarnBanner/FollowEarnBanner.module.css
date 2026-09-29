@@ -298,25 +298,42 @@
 
 @media (max-width: 575.98px) {
   .panelGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .note {
+    align-items: center;
     gap: 8px;
   }
 
   .noteText {
-    font-size: 0.67rem;
+    font-size: 0.64rem;
+    line-height: 1.4;
   }
 
   .noteIcon {
-    width: 26px;
-    height: 26px;
-    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
   }
 
   .reward {
-    padding: 9px 12px;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 7px 10px;
+    text-align: left;
   }
 
   .rewardValue {
-    font-size: 1.15rem;
+    font-size: 1rem;
+  }
+
+  .rewardLabel {
+    text-align: right;
   }
 
   .channels {

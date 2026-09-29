@@ -11,7 +11,7 @@ import WatchAdsVisual from "./WatchAdsVisual";
 export default function WatchAdsBanner({ onWatchAndEarn = () => {} }) {
   return (
     <RewardFeatureBanner
-      id="watch-earn"
+      id="watch-earn-card"
       index="02"
       eyebrow="Watch &amp; earn"
       icon={<Video size={15} strokeWidth={2.3} />}

@@ -83,18 +83,24 @@
   }
 
   .text {
-    line-height: 1.5;
+    margin-top: 8px;
+    line-height: 1.45;
   }
 
   .pills {
-    margin-top: 14px;
+    margin-top: 12px;
+    gap: 6px;
+  }
+
+  .reward {
+    margin-top: 10px;
   }
 
   .actions {
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   .note {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 }
